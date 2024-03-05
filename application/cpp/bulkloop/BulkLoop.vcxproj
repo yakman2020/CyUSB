@@ -78,8 +78,8 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\x64\Release\</OutDir>
-    <IntDir>.\x64\Release\</IntDir>
+    <OutDir>.\x64\Debug\</OutDir>
+    <IntDir>.\x64\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -166,7 +166,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\..\..\library\cpp\lib\x64\cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\library\cpp\lib\x64\$(Configuration)\cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\x64\Debug/bulkloop.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>LIBC;LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -212,7 +212,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/opt:"noref" %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>..\..\..\library\cpp\lib\x86\cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\library\cpp\lib\x86\$(Configuration)/cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\x86\Release/bulkloop.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -257,7 +257,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalOptions>/opt:"noref" %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>..\..\..\library\cpp\lib\x64\cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\library\cpp\lib\x64\$(Configuration)\cyapi.lib;setupapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>.\x64\Release/bulkloop.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>

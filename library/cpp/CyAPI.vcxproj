@@ -77,16 +77,19 @@
     <IntDir>.\x86\Debug\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\x64\Debug\</OutDir>
-    <IntDir>.\x64\Debug\</IntDir>
+    <OutDir>.\lib\x64\$(Configuration)\</OutDir>
+    <IntDir>.\lib\x64\$(Configuration)\</IntDir>
+    <TargetName>CyAPI</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\x86\Release\</OutDir>
-    <IntDir>.\x86\Release\</IntDir>
+    <OutDir>.\lib\x86\$(Configuration)\</OutDir>
+    <IntDir>.\lib\x86\$(Configuration)\</IntDir>
+    <TargetName>CyAPI</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\x64\Release\</OutDir>
-    <IntDir>.\x64\Release\</IntDir>
+    <OutDir>.\lib\x64\$(Configuration)\</OutDir>
+    <IntDir>.\lib\x64\$(Configuration)\</IntDir>
+    <TargetName>CyAPI</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,9 +137,9 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <StructMemberAlignment>Default</StructMemberAlignment>
       <PrecompiledHeaderOutputFile>.\x64\Debug/CyAPI.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\x64\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\x64\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\x64\Debug/</ProgramDataBaseFileName>
+      <AssemblerListingLocation>.\lib/x64\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\lib/x64\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\lib/x64\$(Configuration)/</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -147,7 +150,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile />
+      <OutputFile>lib\x64\$(Configuration)/CyAPI.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -168,9 +171,9 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeaderOutputFile>.\x86\Release/CyAPI.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\x86\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\x86\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\x86\Release/</ProgramDataBaseFileName>
+      <AssemblerListingLocation>.\lib/x86\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\lib/x86\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\lib/x86\$(Configuration)/</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -180,7 +183,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>lib\x86\CyAPI.lib</OutputFile>
+      <OutputFile>lib\x86\$(Configuration)/CyAPI.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -216,7 +219,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>lib\x64\CyAPI.lib</OutputFile>
+      <OutputFile>lib\x64\$(Configuration)/CyAPI.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
